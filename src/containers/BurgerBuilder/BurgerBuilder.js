@@ -90,27 +90,19 @@ class BurgerBuilder extends Component {
   purchaseContinueHandler = () => {
     this.setState({ loading: true });
 
-    const order = {
-      ingredients: this.state.ingredients,
-      price: this.state.totalPrice,
-      customer: {
-        name: 'Yanni Fraga',
-        address: {
-          street: 'Peru street',
-          zipCode: '123456-123',
-          country: 'Brazil'
-        },
-        email: 'yanni@yanni.com'
-      },
-      deliverMethod: 'fastest'
-    }
+      const queryParams = [];
 
-    axios.post('/orders.json', order)
-      .then(response => {
-        this.setState({ loading: false, purchasing: false });
-      })
-      .catch(error => {
-        this.setState({ loading: false, purchasing: false });
+      for(let i in this.state.ingredients) {
+        queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
+      }
+
+      queryParams.push('price=' + this.state.totalPrice);
+      
+      const queryString = queryParams.join('&');
+
+      this.props.history.push({
+        pathname: '/checkout',
+        search: '?' + queryString 
       });
   }
 
@@ -125,8 +117,8 @@ class BurgerBuilder extends Component {
 
     let burger = this.state.error ? <p>Ingredients can't be loaded!</p> : <Spinner />;
     let orderSummary = null;
-    
-    if(this.state.ingredients) {
+
+    if (this.state.ingredients) {
       burger = (
         <Auxiliar>
           <Burger ingredients={this.state.ingredients} />
@@ -141,10 +133,10 @@ class BurgerBuilder extends Component {
       );
 
       orderSummary = <OrderSummary
-      ingredients={this.state.ingredients}
-      price={this.state.totalPrice}
-      purchaseCancelled={this.purchaseCancelHandler}
-      purchaseContinued={this.purchaseContinueHandler} />
+        ingredients={this.state.ingredients}
+        price={this.state.totalPrice}
+        purchaseCancelled={this.purchaseCancelHandler}
+        purchaseContinued={this.purchaseContinueHandler} />
     }
 
     if (this.state.loading) {

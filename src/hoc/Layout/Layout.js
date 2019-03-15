@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Auxiliar from '../Auxiliar/Auxiliar';
 import classes from './Layout.module.css';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
@@ -30,7 +31,7 @@ class Layout extends Component {
           {this.props.children}
         </main>
       </Auxiliar>
-    )
+    );
   }
 }
 
