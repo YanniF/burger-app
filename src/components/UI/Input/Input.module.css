@@ -25,3 +25,8 @@
   outline: none;
   background-color: #f1f1f1;
 }
+
+.Invalid {
+  border: 1px solid #dc143c;
+  box-shadow: 0 0 2px 1px #dc143c;
+}
