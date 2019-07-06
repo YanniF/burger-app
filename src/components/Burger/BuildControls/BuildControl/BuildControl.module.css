@@ -24,15 +24,13 @@
 .BuildControl button:disabled {
 	background-color: #c7c6c6;
 	border: 1px solid #7e7365;
-	color: #888888;
-	cursor: default;
+	color: #888;
 	pointer-events: none;
 }
 
 .BuildControl button:hover:disabled {
 	background-color: #ac9980;
 	color: #ccc;
-	cursor: not-allowed;
 }
 
 .Label {
