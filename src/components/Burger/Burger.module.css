@@ -1,7 +1,4 @@
 .Burger {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	width: 100%;
 	margin: auto;
 	height: 250px;
@@ -12,7 +9,7 @@
 }
 
 ::-webkit-scrollbar {
-	width: 0px; /* remove scrollbar space */
+	width: 0; /* remove scrollbar space */
 }
 
 @media (min-width: 500px) and (min-height: 400px) {
