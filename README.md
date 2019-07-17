@@ -1,3 +1,11 @@
+# Burger App 🍔
+Build and order a delicious burger 🍔   
+  
+It was built with React, Redux and Firebase.  
+It's part of the course [React - The Complete Guide](https://www.udemy.com/react-the-complete-guide-incl-redux/)
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
