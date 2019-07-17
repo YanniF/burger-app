@@ -1,8 +1,7 @@
 # Burger App 🍔
 Build and and customize a delicious burger 🍔   
   
-It was built with React, Redux and Firebase.  
-It's part of the course [React - The Complete Guide](https://www.udemy.com/react-the-complete-guide-incl-redux/)
+It was built with React, Redux and Firebase. It's part of the course [React - The Complete Guide](https://www.udemy.com/react-the-complete-guide-incl-redux/)
 
 And if you want to check it out, [click here](https://yanni-react-my-burger.firebaseapp.com/)
 
